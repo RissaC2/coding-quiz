@@ -1,0 +1,65 @@
+const quiz = [
+  {
+    title: "Commonly used date types DO NOT include:",
+    choices: ["String", "Boolean", "Alerts", "Numbers",],
+    
+      },
+  // Add more questions here
+];
+Answer= true
+let currentQuestionIndex = 0;
+
+function displayQuestion() {
+  const question = quiz[currentQuestionIndex];
+  document.querySelector("#question-title").innerHTML = question.title;
+
+  const choicesList = document.querySelector("#choices ul");
+  choicesList.innerHTML = "";
+  for (const choice of question.choices) {
+    const li = document.createElement("li");
+    li.textContent = choice;
+    choicesList.appendChild(li);
+  }
+}
+
+
+
+document.querySelector(".start").addEventListener("click", function () {
+  document.querySelector("#start-screen").classList.add("hide");
+  displayQuestion();
+});
+
+document.querySelector("#start").addEventListener("click", function () {
+  questions.classList.remove("hide");
+});
+
+for (const choice of question.choices) {
+    const li = document.createElement("li");
+    li.textContent = choice;
+    li.addEventListener("click", function () {
+      // perform some action based on the selected choice
+    });
+    choicesList.appendChild(li);
+}
+//list questioms for quiz
+var li1 = document.createElement("li");
+var li2 = document.createElement("li");
+var li3 = document.createElement("li");
+var li4 = document.createElement("li");
+
+var timel = document.querySelector(".timer");
+
+var secondsleft = 50;
+
+function setTime() {
+var timerInterval = setInterval(function () {
+  secondsLeft--;
+  timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
+
+  if (secondsLeft === 0) {
+    clearInterval(timerInterval);
+
+    sendMessage();
+  }
+}, 1000000);
+}
