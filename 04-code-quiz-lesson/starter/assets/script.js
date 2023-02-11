@@ -8,6 +8,10 @@ const thirdQuestionTitle = document.querySelector("#questionsthree");
 const fourthQuestionTitle = document.querySelector("#questionsfour");
 const fifthQuestionTitle = document.querySelector("#questionsfive");
 const endResult= document.querySelector("end-screen")
+var timer = document.getElementById("time"); 
+var timeLeft = 75;
+
+
   
   
   document.querySelector(".start").addEventListener("click", function () {
@@ -42,32 +46,19 @@ const endResult= document.querySelector("end-screen")
     fifthQuestionTitle.classList.add("hide");
     endResult.classList.remove("hide");
   });
-  
-// const resultsContainer = document.getElementById('results');
-// const submitButton = document.getElementById('submit');
-// submitButton.addEventListener('click', showResults);
 
 
-//   
-//list questioms for quiz
-// var li1 = document.createElement("li");
-// var li2 = document.createElement("li");
-// var li3 = document.createElement("li");
-// var li4 = document.createElement("li");
+ 
 
-// var timel = document.querySelector(".timer");
-
-// var secondsleft = 50;
-
-// function setTime() {
-//   var timerInterval = setInterval(function () {
-//     secondsLeft--;
-//     timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
-
-//     if (secondsLeft === 0) {
-//       clearInterval(timerInterval);
-
-//       sendMessage();
-//     }
-//   }, 1000000);
-// }
+  function startTimer() {
+    timeInterval = setInterval(function () {
+        timeLeft--;
+        timer.textContent = "Time: " + timeLeft;
+ 
+        if (timeLeft < 0) {
+            displayScore(score);
+            clearInterval(timeInterval);
+        }
+    }, 1000);
+ }
+ document.querySelector("#start").addEventListener("click", startTimer);
