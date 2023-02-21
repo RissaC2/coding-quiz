@@ -21,7 +21,8 @@ https://stackoverflow.com/
 
 ![coding quiz image](https://user-images.githubusercontent.com/105446766/220462947-ccc11801-9000-47b2-a066-16ee11d45d98.png)
 
-##
+## Website links
+
 deployed- https://rissac2.github.io/coding-quiz/
 Github-https://github.com/RissaC2/coding-quiz
 
