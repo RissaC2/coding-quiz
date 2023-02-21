@@ -23,7 +23,7 @@ https://stackoverflow.com/
 
 ##
 deployed- https://rissac2.github.io/coding-quiz/
-Github- 
+Github-https://github.com/RissaC2/coding-quiz
 
 
 ## License
